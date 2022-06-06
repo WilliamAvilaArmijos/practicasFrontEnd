@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="clase4.css">
+    <script src="clase4.js"></script>
+
+</head>
+<body>
+    <form id="form-register" action="https://www.google.com.ec/search" method="get">
+        <div class="container">
+            <h2 class="title">Formulario</h2>
+            <div id="name_container" class="name_conteiner">
+                <label for="input-name">Nombre</label>
+                <input type="text" name="name" id="input-name" class="input" placeholder="Nombre:">
+                <p class="input-error"></p>
+            </div>
+            <div id="last_name_container" class="name_conteiner">
+                <label for="input-name">Apellido</label>
+                <input type="text" name="last-name" id="input-last-name" class="input" placeholder="Apellido:">
+                <p class="input-error"></p>
+            </div>
+            <div id="ci_container" class="name_conteiner">
+                <label for="input-name">Cedula</label>
+                <input type="number" name="ci" id="input-ci" class="input" placeholder="Cedula:">
+                <p class="input-error"></p>
+            </div>
+            <div id="email_container" class="name_conteiner">
+                <label for="input-name">Email</label>
+                <input type="text" name="email" id="input-email" class="input" placeholder="Email:">
+                <p class="input-error"></p>
+            </div>
+            <div class="name_conteiner">
+                <button type="submit" class="button">Enviar</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
