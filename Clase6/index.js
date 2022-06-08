@@ -12,7 +12,7 @@ if(fs.existsSync("TAREA")){
     });
 }
 
-var date = new Date(0,0,0);
+var date = new Date();
 var anio = date.getFullYear();
 for (let index = 2017; index <= anio; index++) {
         fs.mkdir("TAREA\\"+anio[index],(err)=>{
