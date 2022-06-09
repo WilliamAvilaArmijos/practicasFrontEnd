@@ -35,12 +35,11 @@ class Factura{
         this.prod = [];
     }
     agregarProductos(produ: productoVenta){
-        produ.total=totalpro;
         this.prod.push(produ);
     }
 
-    calcularSubtotal(produ: productoVenta){
-        let totalpro= produ.precio*produ.cantidad
+    calcularTotalProductos(produ: productoVenta){
+        let totalpro += produ.cantidad
         return totalpro
     }
 
