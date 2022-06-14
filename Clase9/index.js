@@ -22,11 +22,10 @@ obtenerPersonajes().then(
             <div class="card-body">
                 <h5 class="card-title">${heroe.title}</h5>
                 <p class="card-text">${heroe.body}</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
         </div>
         <div class="col-md-3">
-        <button class="content-button" id="btnBorrar" onclic=eliminar('${heroe._id}')>
+        <button class="content-button" id="btnBorrar" onclick=eliminar('${heroe._id}')>
             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
                 width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path fill="none" d="M0 0h24v24H0V0z"></path>
@@ -44,9 +43,25 @@ obtenerPersonajes().then(
 );
 
 
-async function eliminar(_id){
-    let url = `https://bp-marvel-api.herokuapp.com/marvel-characters/${_id}?Author=1`;
+async function eliminar(id){
+    let url = `https://bp-marvel-api.herokuapp.com/marvel-characters/${id}?idAuthor=1`;
     await axios.delete(url);
+    location.reload();
+}
+
+async function agregar(){
+    let nombre= document.getElementById('nombre').value;
+    let descripcion= document.getElementById('descripcion').value;
+    let imagen= document.getElementById('imagen').value;
+
+    await axios.post('https://bp-marvel-api.herokuapp.com/marvel-characters?idAuthor=1',{
+      title: nombre,
+      body: descripcion,
+      image: imagen,
+      category: "main"
+    });
+    console.log(body);
+    alert("Personaje Guardado");
     location.reload();
 }
 
