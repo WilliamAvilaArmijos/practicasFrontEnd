@@ -1,0 +1,21 @@
+.content{
+    width: 60%;
+    height: 600px;
+    margin: auto;
+    margin-top: 80px;
+    justify-content: center;
+
+}
+
+.content-button{
+    background-color: white;
+    color: red;
+    width: 80px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 80px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
